@@ -1,4 +1,4 @@
-console.log("Hello from the library");
+// console.log("Hello from the library");
 
 const myLibrary = [];
 
@@ -16,8 +16,13 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 
-addBookToLibrary("Harry Potter", "Billy", "1000", "No");
-addBookToLibrary("Wizard", "Trump", "300", "Yes");
+addBookToLibrary("Harry Potter", "Billy", "1000", "Have not");
+addBookToLibrary("Wizard", "Trump", "300", "Have");
 
-console.log(myLibrary[0].title);
-console.log(myLibrary[1].author);
+function displayBook(library) {
+    for (const book of library) {
+        console.log(`${book.title} by ${book.author}, ${book.pages} pages, ${book.read} read yet.`);
+    }
+}
+
+displayBook(myLibrary);
