@@ -1,5 +1,3 @@
-// console.log("Hello from the library");
-
 const myLibrary = [];
 
 const container = document.querySelector(".container");
@@ -35,7 +33,6 @@ function displayBook(library) {
         bookCard.appendChild(bookTitle);
         bookCard.appendChild(bookDesc);
         container.appendChild(bookCard);
-        //console.log(`${book.title} by ${book.author}, ${book.pages} pages, ${book.read} read yet.`);
     }
 }
 
