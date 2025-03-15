@@ -27,6 +27,8 @@ function displayBook(library) {
         const bookTitle = document.createElement("h2");
         const bookDesc = document.createElement("p");
 
+        bookCard.classList.add("card");
+
         bookTitle.textContent = `${book.title}`;
         bookDesc.textContent = `by ${book.author}, ${book.pages} pages, ${book.read} read yet.`;
 
