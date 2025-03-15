@@ -2,7 +2,7 @@
 
 const myLibrary = [];
 
-const container = document.querySelector(".container");s
+const container = document.querySelector(".container");
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -23,7 +23,17 @@ addBookToLibrary("Wizard", "Trump", "300", "Have");
 
 function displayBook(library) {
     for (const book of library) {
-        console.log(`${book.title} by ${book.author}, ${book.pages} pages, ${book.read} read yet.`);
+        const bookCard = document.createElement("div");
+        const bookTitle = document.createElement("h2");
+        const bookDesc = document.createElement("p");
+
+        bookTitle.textContent = `${book.title}`;
+        bookDesc.textContent = `by ${book.author}, ${book.pages} pages, ${book.read} read yet.`;
+
+        bookCard.appendChild(bookTitle);
+        bookCard.appendChild(bookDesc);
+        container.appendChild(bookCard);
+        //console.log(`${book.title} by ${book.author}, ${book.pages} pages, ${book.read} read yet.`);
     }
 }
 
