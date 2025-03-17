@@ -38,9 +38,9 @@ function displayBook(library) {
         bookRead.classList.add("read");
 
         bookTitle.textContent = `${book.title}`;
-        bookAuthor.textContent = `${book.author}`;
+        bookAuthor.textContent = `by ${book.author}`;
         bookPages.textContent = `${book.pages} pages`;
-        bookRead.textContent = `${book.read} read yet.`;
+        bookRead.textContent = `Read: ${book.read}`;
 
         bookCard.appendChild(bookTitle);
         bookCard.appendChild(bookAuthor);
