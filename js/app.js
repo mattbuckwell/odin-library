@@ -27,15 +27,25 @@ function displayBook(library) {
     for (const book of library) {
         const bookCard = document.createElement("div");
         const bookTitle = document.createElement("h2");
-        const bookDesc = document.createElement("p");
+        const bookAuthor = document.createElement("p");
+        const bookPages = document.createElement("p");
+        const bookRead = document.createElement("p");
 
         bookCard.classList.add("card");
+        bookTitle.classList.add("title");
+        bookAuthor.classList.add("author");
+        bookPages.classList.add("pages");
+        bookRead.classList.add("read");
 
         bookTitle.textContent = `${book.title}`;
-        bookDesc.textContent = `by ${book.author}, ${book.pages} pages, ${book.read} read yet.`;
+        bookAuthor.textContent = `${book.author}`;
+        bookPages.textContent = `${book.pages} pages`;
+        bookRead.textContent = `${book.read} read yet.`;
 
         bookCard.appendChild(bookTitle);
-        bookCard.appendChild(bookDesc);
+        bookCard.appendChild(bookAuthor);
+        bookCard.appendChild(bookPages);
+        bookCard.appendChild(bookRead);
         container.appendChild(bookCard);
     }
 }
