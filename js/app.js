@@ -3,7 +3,8 @@ const myLibrary = [];
 const container = document.querySelector(".container");
 const dialog = document.querySelector("dialog");
 const newBtn = document.querySelector(".btn");
-const closeBtn = document.querySelector(".addBtn");
+const addBtn = document.querySelector(".addBtn");
+const cancelBtn = document.querySelector(".cancelBtn");
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -43,7 +44,11 @@ newBtn.addEventListener("click", () => {
     dialog.showModal();
 });
 
-closeBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", () => {
+    dialog.close();
+})
+
+cancelBtn.addEventListener("click", () => {
     dialog.close();
 })
 
