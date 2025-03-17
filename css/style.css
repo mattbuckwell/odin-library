@@ -18,9 +18,35 @@ dialog {
 }
 
 .card {
-    margin-top: 20px;
     border: 1px solid #000;
     border-radius: 10px;
     width: 250px;
     height: 200px;
+    position: relative;
+}
+
+.title,
+.author,
+.pages,
+.read {
+    margin-left: 10px;
+}
+
+.title {
+    margin-top: 10px;
+}
+
+.author {
+
+}
+
+.pages {
+    position: absolute;
+    bottom: 5px;
+}
+
+.read {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
