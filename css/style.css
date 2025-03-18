@@ -55,31 +55,30 @@ dialog {
 }
 
 /* ------ DIALOG BOX ------ */
+.book-form {
+    padding-left: 30px;
+}
+
+
 .book-form h2 {
     text-align: center;
     font-size: 1.8rem;
     margin: 10px 0;
 }
-.book-title {
 
-}
-
-.book-author{
-
-}
-
-.book-pages {
-
-}
-
+.book-title,
+.book-author,
+.book-pages,
 .book-read {
-
+    margin: 20px 0;
 }
 
-.addBtn {
-
-}
-
+.addBtn,
 .cancelBtn {
-
+    height: 3rem;
+    width: 7rem;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: cadetblue;
 }
