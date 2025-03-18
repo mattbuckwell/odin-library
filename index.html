@@ -9,7 +9,24 @@
 <body>
     <main class="container">
         <dialog>
-            <p>This will display the form for the user to fill out</p>
+            <form action="#">
+                <div class="book-title">
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="book-author">
+                    <label for="author">Book Author:</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div class="book-pages">
+                    <label for="pages">Book Pages:</label>
+                    <input type="text" id="pages" name="pages">
+                </div>
+                <div class="book-read">
+                    <label for="read">Read Book?</label>
+                    <input type="checkbox" id="read" name="read">
+                </div>
+            </form>
             <button class="addBtn">Add Book</button>
             <button class="cancelBtn">Cancel</button>
         </dialog>
