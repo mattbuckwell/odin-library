@@ -12,9 +12,11 @@
 }
 
 dialog {
-    margin: 0 auto;
+    margin: 50px auto;
     width: 500px;
     height: 500px;
+    border-radius: 10px;
+    border: 3px solid blue;
 }
 
 .card {
@@ -53,6 +55,11 @@ dialog {
 }
 
 /* ------ DIALOG BOX ------ */
+.book-form h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
 .book-title {
 
 }
@@ -74,5 +81,5 @@ dialog {
 }
 
 .cancelBtn {
-    
+
 }
