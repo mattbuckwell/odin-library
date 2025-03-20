@@ -22,6 +22,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     if (title === "" || author === "" || pages === "") {
         console.log("ERROR!!");
+        // need to display on the form that input is missing a value and not close the form
     } else {
         if (readInput.checked === true || read === true) {
             read = "YES";
