@@ -20,14 +20,17 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(title, author, pages, read) {
-    if (readInput.checked === true || read === true) {
-        console.log("You have selected yes!");
-        read = "YES";
+    if (title === "" || author === "" || pages === "") {
+        console.log("ERROR!!");
     } else {
-        read = "NO"
+        if (readInput.checked === true || read === true) {
+            read = "YES";
+        } else {
+            read = "NO"
+        }
+        let newBook = new Book(title, author, pages, read);
+        myLibrary.push(newBook);
     }
-    let newBook = new Book(title, author, pages, read);
-    myLibrary.push(newBook);
 }
 
 
