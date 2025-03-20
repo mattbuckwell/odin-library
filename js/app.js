@@ -6,6 +6,11 @@ const newBtn = document.querySelector(".btn");
 const addBtn = document.querySelector(".addBtn");
 const cancelBtn = document.querySelector(".cancelBtn");
 
+const titleInput = document.querySelector("#title");
+const authorInput = document.querySelector("#author");
+const pagesInput = document.querySelector("#pages");
+const readInput = document.querySelector("#read");
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -54,12 +59,16 @@ newBtn.addEventListener("click", () => {
     dialog.showModal();
 });
 
-addBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", (e) => {
+    e.preventDefault()
+    addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput.value);
+    displayBook(myLibrary);
     dialog.close();
 })
 
-cancelBtn.addEventListener("click", () => {
+cancelBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     dialog.close();
 })
 
-displayBook(myLibrary);
+//displayBook(myLibrary); 
