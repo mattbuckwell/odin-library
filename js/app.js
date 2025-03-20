@@ -20,13 +20,19 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(title, author, pages, read) {
+    if (readInput.checked === true || read === true) {
+        console.log("You have selected yes!");
+        read = "YES";
+    } else {
+        read = "NO"
+    }
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
 }
 
 
-addBookToLibrary("Harry Potter", "Billy", "1000", "Have not");
-addBookToLibrary("Wizard", "Trump", "300", "Have");
+addBookToLibrary("Harry Potter", "Billy", "1000", true);
+addBookToLibrary("Wizard", "Trump", "300", true);
 
 function displayBook(library) {
     for (const book of library) {
