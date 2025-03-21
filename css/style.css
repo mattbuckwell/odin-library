@@ -5,10 +5,13 @@
     box-sizing: border-box;
 }
 
+body {
+    padding-left: 20px;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
-    padding-left: 20px;
 }
 
 dialog {

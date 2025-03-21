@@ -1,6 +1,8 @@
 const myLibrary = [];
 
 const container = document.querySelector(".container");
+const holding = document.createElement("div");
+container.appendChild(holding);
 const dialog = document.querySelector("dialog");
 const newBtn = document.querySelector(".btn");
 const addBtn = document.querySelector(".addBtn");
@@ -38,6 +40,7 @@ addBookToLibrary("Harry Potter", "Billy", "1000", true);
 addBookToLibrary("Wizard", "Trump", "300", true);
 
 function displayBook(library) {
+    holding.innerHTML = "";
     for (const book of library) {
         const bookCard = document.createElement("div");
         const bookTitle = document.createElement("h2");
@@ -60,7 +63,7 @@ function displayBook(library) {
         bookCard.appendChild(bookAuthor);
         bookCard.appendChild(bookPages);
         bookCard.appendChild(bookRead);
-        container.appendChild(bookCard);
+        holding.appendChild(bookCard);
     }
 }
 
