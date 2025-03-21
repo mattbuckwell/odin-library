@@ -20,9 +20,8 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(title, author, pages, read) {
-    if (title === "" || author === "" || pages === "") {
-        console.log("ERROR!!");
-        // need to display on the form that input is missing a value and not close the form
+    if (title === '' || author === '' || pages === '') {
+        alert("All fields need to be filled!");
     } else {
         if (readInput.checked === true || read === true) {
             read = "YES";
@@ -72,8 +71,8 @@ newBtn.addEventListener("click", () => {
 addBtn.addEventListener("click", (e) => {
     e.preventDefault()
     addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput.value);
-    displayBook(myLibrary);
     dialog.close();
+    displayBook(myLibrary);
 })
 
 cancelBtn.addEventListener("click", (e) => {
@@ -81,4 +80,4 @@ cancelBtn.addEventListener("click", (e) => {
     dialog.close();
 })
 
-//displayBook(myLibrary); 
+displayBook(myLibrary); 
