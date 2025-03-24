@@ -79,11 +79,12 @@ function displayBook(library) {
         })
 
         bookRead.addEventListener("click", () => {
-            if(bookRead.innerHTML === "Read: YES") {
-                bookRead.textContent = "Read: NO";
+            if(book.read === "YES") {
+                book.read = "NO";
             } else {
-                bookRead.textContent = "Read: YES";
+                book.read = "YES";
             }
+            bookRead.textContent = `Read: ${book.read}`;
         })
     }
 }
