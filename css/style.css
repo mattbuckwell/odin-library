@@ -55,6 +55,8 @@ dialog {
     position: absolute;
     bottom: 5px;
     right: 5px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 /* ------ DIALOG BOX ------ */

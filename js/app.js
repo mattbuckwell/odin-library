@@ -77,6 +77,14 @@ function displayBook(library) {
             myLibrary.splice(book.id, 1);
             bookCard.remove();
         })
+
+        bookRead.addEventListener("click", () => {
+            if(bookRead.innerHTML === "Read: YES") {
+                bookRead.textContent = "Read: NO";
+            } else {
+                bookRead.textContent = "Read: YES";
+            }
+        })
     }
 }
 
