@@ -50,7 +50,7 @@ function displayBook(library) {
         const bookTitle = document.createElement("h2");
         const bookAuthor = document.createElement("p");
         const bookPages = document.createElement("p");
-        const bookRead = document.createElement("p");
+        const bookRead = document.createElement("button");
         const deleteBtn = document.createElement("button");
 
         bookCard.classList.add("card");
