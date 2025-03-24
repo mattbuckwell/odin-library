@@ -51,23 +51,32 @@ function displayBook(library) {
         const bookAuthor = document.createElement("p");
         const bookPages = document.createElement("p");
         const bookRead = document.createElement("p");
+        const deleteBtn = document.createElement("button");
 
         bookCard.classList.add("card");
         bookTitle.classList.add("title");
         bookAuthor.classList.add("author");
         bookPages.classList.add("pages");
         bookRead.classList.add("read");
+        deleteBtn.classList.add("delete");
 
         bookTitle.textContent = `${book.title}`;
         bookAuthor.textContent = `by ${book.author}`;
         bookPages.textContent = `${book.pages} pages`;
         bookRead.textContent = `Read: ${book.read}`;
+        deleteBtn.textContent = "Delete book";
 
         bookCard.appendChild(bookTitle);
         bookCard.appendChild(bookAuthor);
         bookCard.appendChild(bookPages);
         bookCard.appendChild(bookRead);
+        bookCard.appendChild(deleteBtn);
         holding.appendChild(bookCard);
+
+        deleteBtn.addEventListener("click", () => {
+            myLibrary.splice(book.id, 1);
+            bookCard.remove();
+        })
     }
 }
 
