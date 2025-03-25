@@ -37,6 +37,15 @@ function addBookToLibrary(title, author, pages, read) {
     }
 }
 
+function deleteBook(id) {
+    for (let i = 0; i < myLibrary.length; i++) {
+        if (id === myLibrary[i].id) {
+            console.log("sup!");
+            myLibrary.splice(id, 1);
+        }
+    }
+}
+
 
 addBookToLibrary("Harry Potter", "Billy", "1000", true);
 addBookToLibrary("Wizard", "Trump", "300", true);
@@ -74,7 +83,7 @@ function displayBook(library) {
         holding.appendChild(bookCard);
 
         deleteBtn.addEventListener("click", () => {
-            myLibrary.splice(book.id, 1);
+            deleteBook(book.id);
             bookCard.remove();
         })
 
