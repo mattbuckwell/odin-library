@@ -1,10 +1,10 @@
 const myLibrary = [];
 
 const container = document.querySelector(".container");
-// clean up the code here ----
-const holding = document.createElement("div");
-container.appendChild(holding);
-//-------
+
+const libraryContainer = document.createElement("div");
+container.appendChild(libraryContainer);
+
 const dialog = document.querySelector("dialog");
 const newBtn = document.querySelector(".btn");
 const addBtn = document.querySelector(".addBtn");
@@ -40,7 +40,6 @@ function addBookToLibrary(title, author, pages, read) {
 function deleteBook(id) {
     for (let i = 0; i < myLibrary.length; i++) {
         if (id === myLibrary[i].id) {
-            console.log("sup!");
             myLibrary.splice(id, 1);
         }
     }
@@ -51,9 +50,7 @@ addBookToLibrary("Harry Potter", "Billy", "1000", true);
 addBookToLibrary("Wizard", "Trump", "300", true);
 
 function displayBook(library) {
-    // clean up ----
-    holding.innerHTML = "";
-    // -----
+    libraryContainer.innerHTML = "";
     for (const book of library) {
         const bookCard = document.createElement("div");
         const bookTitle = document.createElement("h2");
@@ -80,7 +77,7 @@ function displayBook(library) {
         bookCard.appendChild(bookPages);
         bookCard.appendChild(bookRead);
         bookCard.appendChild(deleteBtn);
-        holding.appendChild(bookCard);
+        libraryContainer.appendChild(bookCard);
 
         deleteBtn.addEventListener("click", () => {
             deleteBook(book.id);
