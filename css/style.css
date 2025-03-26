@@ -57,6 +57,9 @@ dialog {
     bottom: 5px;
     right: 10px;
     cursor: pointer;
+    border: none;
+    background-color: #fff;
+    font-weight: 500;
 }
 
 .delete {
