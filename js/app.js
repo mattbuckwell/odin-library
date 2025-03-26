@@ -45,10 +45,6 @@ function deleteBook(id) {
     }
 }
 
-
-addBookToLibrary("Harry Potter", "Billy", "1000", true);
-addBookToLibrary("Wizard", "Trump", "300", true);
-
 function displayBook(library) {
     libraryContainer.innerHTML = "";
     for (const book of library) {
@@ -70,7 +66,7 @@ function displayBook(library) {
         bookAuthor.textContent = `by ${book.author}`;
         bookPages.textContent = `${book.pages} pages`;
         bookRead.textContent = `Read: ${book.read}`;
-        deleteBtn.textContent = "Delete book";
+        deleteBtn.textContent = "x";
 
         bookCard.appendChild(bookTitle);
         bookCard.appendChild(bookAuthor);
@@ -104,11 +100,14 @@ addBtn.addEventListener("click", (e) => {
     addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput.value);
     dialog.close();
     displayBook(myLibrary);
-})
+});
 
 cancelBtn.addEventListener("click", (e) => {
     e.preventDefault();
     dialog.close();
-})
+});
+
+addBookToLibrary("Harry Potter", "Billy", "1000", true);
+addBookToLibrary("Wizard", "Trump", "300", true);
 
 displayBook(myLibrary); 

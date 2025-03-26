@@ -56,6 +56,21 @@ dialog {
     position: absolute;
     bottom: 5px;
     right: 10px;
+    cursor: pointer;
+}
+
+.delete {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: darkgrey;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* ------ DIALOG BOX ------ */
