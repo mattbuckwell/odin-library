@@ -3,6 +3,7 @@
     margin: 0;
     font-size: 16px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -40,7 +41,7 @@ dialog {
 
 .title {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .author {
