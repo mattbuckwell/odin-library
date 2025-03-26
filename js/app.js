@@ -3,6 +3,7 @@ const myLibrary = [];
 const container = document.querySelector(".container");
 
 const libraryContainer = document.createElement("div");
+libraryContainer.classList.add("library-container");
 container.appendChild(libraryContainer);
 
 const dialog = document.querySelector("dialog");
